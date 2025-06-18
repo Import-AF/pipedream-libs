@@ -1,0 +1,31 @@
+{
+  "name": "@import-af/monday",
+  "version": "1.0.0",
+  "description": "Monday.com integration utilities for automation workflows",
+  "main": "index.js",
+  "files": ["index.js", "README.md"],
+  "scripts": {
+    "test": "echo \"No tests specified\"",
+    "clean": "echo \"Nothing to clean\""
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/import-af/pipedream-libs.git",
+    "directory": "packages/monday"
+  },
+  "keywords": [
+    "automation",
+    "integration",
+    "monday",
+    "javascript",
+    "import-af"
+  ],
+  "author": "Import AF <contact@import-af.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

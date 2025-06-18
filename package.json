@@ -1,0 +1,27 @@
+{
+  "name": "pipedream-libs",
+  "version": "1.0.0",
+  "description": "🚀 Open-source automation libraries by Import AF. Modular NPM packages for seamless business system integrations, designed for PipeDream workflows and beyond.",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "test": "npm run test --workspaces --if-present",
+    "publish:all": "npm publish --workspaces",
+    "clean": "npm run clean --workspaces --if-present"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/import-af/pipedream-libs.git"
+  },
+  "author": "Import AF <contact@import-af.com>",
+  "license": "MIT",
+  "keywords": [
+    "automation",
+    "integration",
+    "business",
+    "workflow",
+    "javascript",
+    "npm",
+    "open-source"
+  ]
+}
