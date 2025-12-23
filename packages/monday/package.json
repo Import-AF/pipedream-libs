@@ -1,9 +1,12 @@
 {
   "name": "@import-af/monday",
-  "version": "1.0.0",
+  "version": "1.0.25",
   "description": "Monday.com integration utilities for automation workflows",
   "main": "index.js",
-  "files": ["index.js", "README.md"],
+  "files": [
+    "index.js",
+    "README.md"
+  ],
   "scripts": {
     "test": "echo \"No tests specified\"",
     "clean": "echo \"Nothing to clean\""
