@@ -1,6 +1,6 @@
 {
   "name": "@import-af/monday",
-  "version": "1.0.25",
+  "version": "1.0.27",
   "description": "Monday.com integration utilities for automation workflows",
   "main": "index.js",
   "files": [

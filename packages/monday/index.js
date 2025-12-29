@@ -364,7 +364,7 @@ function sanitizePhone(value) {
 function sanitizeNumbers(value) {
   if (value === null || value === undefined) return null;
   if (value === '') return null;
-  
+
   // Handle null, undefined, or non-convertible objects
   if (typeof value === 'object' && !Array.isArray(value) && !(value instanceof Date)) {
     return null;
@@ -373,7 +373,10 @@ function sanitizeNumbers(value) {
   // Convert to string
   let strValue = String(value);
 
-  // Keep only digits and dots
+  // Check if the number is negative (preserve sign)
+  const isNegative = strValue.trim().startsWith('-');
+
+  // Keep only digits and dots (remove everything else including signs)
   strValue = strValue.replace(/[^\d.]/g, '');
 
   // Check if empty after filtering
@@ -388,13 +391,20 @@ function sanitizeNumbers(value) {
   }
 
   // Convert to float or int
+  let numValue;
   if (strValue.includes('.')) {
-    const floatValue = parseFloat(strValue);
-    return isNaN(floatValue) ? null : floatValue;
+    numValue = parseFloat(strValue);
   } else {
-    const intValue = parseInt(strValue, 10);
-    return isNaN(intValue) ? null : intValue;
+    numValue = parseInt(strValue, 10);
   }
+
+  // Return null if parsing failed
+  if (isNaN(numValue)) {
+    return null;
+  }
+
+  // Apply negative sign if original value was negative
+  return isNegative ? -numValue : numValue;
 }
 
 function sanitizeDate(value) {
